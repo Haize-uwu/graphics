@@ -1,0 +1,32 @@
+#+title: Opengl
+* Writing the application
+        * has bindings in python, java and Lua if I get annoyed with c/c++.
+        * need to set up a build environment for c/c++
+          * link libGL $-lGL$
+** First initialise it.
+To chek installation and version.
+#+BEGIN_SRC
+glxinfo | grep OpenGL
+#+END_SRC
+*** Create the OpenGL context
+        * use a window toolkit \rightarrow create a window and then attach openGL context to this window and manage inputs
+        * This can be done manually if you want
+          * Use `freeglut` or `GLFW`
+          * [[https://en.wikibooks.org/wiki/OpenGL_Programming][This is the link to the wiki]]
+*** Load the necessary functions to use OpenGL
+        * SDL
+        * GLEW
+        * BUNCHA OTHER STUFF IN THE $template.cpp$ file.
+* Some Notes about OpenGL
+        * default coordinate within $[-1,1]$ range for the (2Dspace?)
+        * BUT the window is not square so be careful!
+** The Vertex shader
+        * will get each point in the array and tell you where to put them on screen
+        * you specify the glsx version in the file!
+** The fragment shader
+        * Once opengl has the 3 points on screen, it will fill the space between them to make the triangle.
+        * For each pixel  between the 3 points, the fragment shader will be called
+        * It will color the pixels.
+** GLSL program
+        * is combination of the vertex and fragment shader
+        * The vertex shader can pass additional information to the fragment shader
