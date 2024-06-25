@@ -30,3 +30,9 @@ glxinfo | grep OpenGL
 ** GLSL program
         * is combination of the vertex and fragment shader
         * The vertex shader can pass additional information to the fragment shader
+*****  Result of triangle program: :ATTACH:
+:PROPERTIES:
+:ID:       47cfae17-3b8c-428b-82e7-c468cb214bb6
+:END:
+
+[[attachment:_20240625_225915screenshot.png]]
